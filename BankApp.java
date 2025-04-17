@@ -48,6 +48,7 @@ public class BankApp {
                     break;
                 }
                 case 2: {
+                    try {
                     System.out.print("Enter account number: ");
                     int id = input.nextInt();
                     System.out.print("Enter amount: ");
@@ -55,6 +56,10 @@ public class BankApp {
                     accounts[id-1].deposit(amount);
                     System.out.println("done");
                     break;
+                } catch(java.lang.ArrayIndexOutOfBoundsException e) {
+                    System.out.println("Please enter a valid number");
+ 
+                }
                 }
                 case 3:{
                     System.out.print("Enter account number: ");
